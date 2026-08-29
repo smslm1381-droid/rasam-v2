@@ -1,0 +1,33 @@
+# --- محیط مجازی و پایتون ---
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- اسرار: هرگز کامیت نشوند ---
+.env
+.env.local
+*.pem
+*.key
+
+# --- داده و حافظه‌ی دانش (بازتولیدشدنی‌اند) ---
+data/raw/
+data/*.sqlite
+customers/*/vector_store/
+chroma/
+
+# --- خروجی داکر و لاگ ---
+mongo_data/
+*.log
+
+# --- ویرایشگر و سیستم‌عامل ---
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+.DS_Store
