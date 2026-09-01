@@ -1,0 +1,27 @@
+# مشتری نمونه‌ی توسعه: داده‌ی تله‌متری یک نیروگاه خورشیدی.
+# این فایل کامیت می‌شود؛ هیچ رمزی داخلش نیست — فقط نام متغیر محیطی.
+name: demo
+
+database:
+  type: mongodb
+  uri_env: DEMO_MONGO_URI      # مقدارش در `.env`؛ کاربرش باید فقط-خواندنی باشد
+  database: solar_telemetry
+  # فهرست سفید کالکشن‌ها. گارد قدم ۴ فقط همین‌ها را برای اجرا و `$lookup`
+  # مجاز می‌داند؛ هر نام دیگری رد می‌شود.
+  collections:
+    - inverter_data
+    - string_data
+    - lvpanel_data
+    - mvpanel_data
+
+capabilities:
+  table: true
+  summary: true
+  chart: true
+  export_csv: false
+
+limits:
+  max_rows: 1000
+  query_timeout_seconds: 15
+
+language: fa
